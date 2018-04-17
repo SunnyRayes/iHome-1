@@ -19,3 +19,28 @@ class Config(object):
     SESSION_USE_SIGNER = True  # 让 cookie 中的 session_id 被加密签名处理
     SESSION_REDIS = redis.StrictRedis(host=REDIS_HOST, port=REDIS_PORT)  # 使用 redis 的实例
     PERMANENT_SESSION_LIFETIME = 86400  # session 的有效期，单位是秒
+
+
+class DevelopmentConfig(Config):
+    """开发环境"""
+    pass
+
+
+class ProductConfig(Config):
+    """生产环境"""
+    DUBUG = False
+    SQLALCHEMY_DATABASE_URI = 'mysql://root:fuckyou@127.0.0.1:3306/db_ihome'
+
+
+class UnittestConfig(Config):
+    """测试环境"""
+    TESTING = True
+    SQLALCHEMY_DATABASE_URI = 'mysql://root:fuckyou@127.0.0.1:3306/ihome_test'
+
+
+# 用字典存储配置类
+configs = {
+    'development': DevelopmentConfig,
+    'product': ProductConfig,
+    'unittest': UnittestConfig
+}
