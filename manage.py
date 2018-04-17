@@ -4,6 +4,8 @@ from flask_sqlalchemy import SQLAlchemy
 import redis
 from flask_wtf.csrf import CSRFProtect
 from flask_session import Session
+from flask_script import Manager
+from flask_migrate import Migrate, MigrateCommand
 
 
 class Config(object):
@@ -41,6 +43,13 @@ CSRFProtect(app)
 # 开启Session
 Session(app)
 
+# Flask_script脚本管理
+manager = Manager(app)
+
+# 数据库迁移
+Migrate(app, db)
+manager.add_command('db', MigrateCommand)
+
 
 @app.route('/')
 def index():
@@ -48,4 +57,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run()
+    manager.run()
