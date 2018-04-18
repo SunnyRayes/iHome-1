@@ -15,6 +15,9 @@ redis_store = None
 # 开启csrf方法
 csrf = CSRFProtect()
 
+# session
+session = Session()
+
 
 def create_app(config_name):
     app = Flask(__name__)
@@ -32,5 +35,10 @@ def create_app(config_name):
     csrf.init_app(app)
 
     # 开启Session
-    Session(app)
+    session.init_app(app)
+
+    # 注册蓝图
+    from ihome.api_1_0 import api
+    app.register_blueprint(api)
+
     return app
