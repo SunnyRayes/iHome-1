@@ -2,6 +2,7 @@
 from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
 from ihome import create_app, db
+from ihome import models
 
 app = create_app('development')
 manager = Manager(app)
