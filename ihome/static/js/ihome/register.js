@@ -5,27 +5,29 @@ function getCookie(name) {
 
 function generateUUID() {
     var d = new Date().getTime();
-    if(window.performance && typeof window.performance.now === "function"){
+    if (window.performance && typeof window.performance.now === "function") {
         d += performance.now(); //use high-precision timer if available
     }
-    var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-        var r = (d + Math.random()*16)%16 | 0;
-        d = Math.floor(d/16);
-        return (c=='x' ? r : (r&0x3|0x8)).toString(16);
+    var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        var r = (d + Math.random() * 16) % 16 | 0;
+        d = Math.floor(d / 16);
+        return (c == 'x' ? r : (r & 0x3 | 0x8)).toString(16);
     });
     return uuid;
 }
+
 var uuid = "";
+
 // 生成一个图片验证码的编号，并设置页面中图片验证码img标签的src属性
 function generateImageCode() {
-    // 1.获取uuid
-    uuid = generateUUID();
-    // 2.拼接带有uuid的请求地址
-    var url = '/api/1.0/image_code?uuid=' + uuid;
+    // 1. 获取UUID
+    var new_uuid = generateUUID();
+    // 2. 拼接URL
+    var url = "/api/1.0/img_code?new_uuid=" + new_uuid + "&uuid=" + uuid;
+    // 3. 修改请求地址
+    $('.image-code>img').prop('src', url);
+    uuid = new_uuid
 
-    // > 标签选择器，表示寻找父节点的子节点
-    // '空格' ： 标签选择器，表示寻找父节点的子节点，如果一级找不见，自动寻找下一级，直到找到为止
-    $('.image-code>img').attr('src', url)
 }
 
 function sendSMSCode() {
@@ -37,7 +39,7 @@ function sendSMSCode() {
         $("#mobile-err").show();
         $(".phonecode-a").attr("onclick", "sendSMSCode();");
         return;
-    } 
+    }
     var imageCode = $("#imagecode").val();
     if (!imageCode) {
         $("#image-code-err span").html("请填写验证码！");
@@ -49,23 +51,23 @@ function sendSMSCode() {
     // TODO: 通过ajax方式向后端接口发送请求，让后端发送短信验证码
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
     generateImageCode();  // 生成一个图片验证码的编号，并设置页面中图片验证码img标签的src属性
 
-    $("#mobile").focus(function(){
+    $("#mobile").focus(function () {
         $("#mobile-err").hide();
     });
-    $("#imagecode").focus(function(){
+    $("#imagecode").focus(function () {
         $("#image-code-err").hide();
     });
-    $("#phonecode").focus(function(){
+    $("#phonecode").focus(function () {
         $("#phone-code-err").hide();
     });
-    $("#password").focus(function(){
+    $("#password").focus(function () {
         $("#password-err").hide();
         $("#password2-err").hide();
     });
-    $("#password2").focus(function(){
+    $("#password2").focus(function () {
         $("#password2-err").hide();
     });
 
