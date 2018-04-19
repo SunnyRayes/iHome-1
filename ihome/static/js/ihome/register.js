@@ -21,12 +21,11 @@ var uuid = "";
 // 生成一个图片验证码的编号，并设置页面中图片验证码img标签的src属性
 function generateImageCode() {
     // 1. 获取UUID
-    var new_uuid = generateUUID();
+    uuid = generateUUID();
     // 2. 拼接URL
-    var url = "/api/1.0/img_code?new_uuid=" + new_uuid + "&uuid=" + uuid;
+    var url = "/api/1.0/img_code?uuid=" + uuid;
     // 3. 修改请求地址
     $('.image-code>img').prop('src', url);
-    uuid = new_uuid
 
 }
 
@@ -48,7 +47,27 @@ function sendSMSCode() {
         return;
     }
 
-    // TODO: 通过ajax方式向后端接口发送请求，让后端发送短信验证码
+    // 通过ajax方式向后端接口发送请求，让后端发送短信验证码
+    var params = {
+        'mobile': mobile,
+        'img_code': imageCode,
+        'uuid': uuid
+    };
+    $.ajax({
+        url: "/api/1.0/sms_code",
+        method: "POST",
+        data: JSON.stringify(params),
+        contentType: "json",
+        success: function (data) {
+            if (data.errno === '0') {
+                console.log(data.errmsg)
+            } else {
+                alert(data.errmsg)
+            }
+
+        }
+
+    })
 }
 
 $(document).ready(function () {
