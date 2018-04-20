@@ -5,7 +5,7 @@ import random
 import re
 
 from flask import make_response, request, jsonify, abort
-from ihome import redis_store
+from ihome import redis_store, constants
 from ihome.response_code import RET, error_map
 from . import api
 from ihome.utils.captcha.captcha import captcha
@@ -29,7 +29,7 @@ def get_verify_code():
         if old_uuid:
             # 删除之前的验证信息
             redis_store.delete('Img_code:%s' % old_uuid)
-        redis_store.set('Img_code:%s' % uuid, text)
+        redis_store.set('Img_code:%s' % uuid, text, constants.IMAGE_CODE_REDIS_EXPIRES)
     except Exception as e:
         print(e)
         return jsonify({'errcode': RET.DATAERR, 'errmsg': error_map[RET.DATAERR]})
@@ -57,7 +57,7 @@ def send_sms_code():
     if not all([mobile, img_code_client, uuid]):
         return jsonify(errno=RET.PARAMERR, errmsg=error_map[RET.PARAMERR])
 
-    if not re.match(r'1[3-8]\d{9}', mobile):
+    if not re.match(r'^1[3-8]\d{9}$', mobile):
         return jsonify(errno=RET.PARAMERR, errmsg='手机号码不合法')
     try:
         img_code_server = redis_store.get('Img_code:%s' % uuid)
@@ -75,7 +75,7 @@ def send_sms_code():
         return jsonify(errno=RET.THIRDERR, errmsg=error_map[RET.THIRDERR])
     # 保存到ｒｅｄｉｓ中
     try:
-        redis_store.set('sms_code:%s' % mobile, sms_code)
+        redis_store.set('sms_code:%s' % mobile, sms_code, constants.SMS_CODE_REDIS_EXPIRES)
     except Exception as e:
         return jsonify(errno=RET.DBERR, errmsg=error_map[RET.DBERR])
     return jsonify(errno=RET.OK, errmsg='发送验证码成功')

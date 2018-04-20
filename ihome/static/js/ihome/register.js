@@ -57,6 +57,7 @@ function sendSMSCode() {
         url: "/api/1.0/sms_code",
         method: "POST",
         data: JSON.stringify(params),
+        headers: {'X-CSRFToken': getCookie('csrf_token')},
         contentType: "json",
         success: function (data) {
             if (data.errno === '0') {
@@ -90,5 +91,57 @@ $(document).ready(function () {
         $("#password2-err").hide();
     });
 
-    // TODO: 注册的提交(判断参数是否为空)
+
+    $('.form-register').submit(function (event) {
+        event.preventDefault();
+        var mobile = $('#mobile').val();
+        var sms_code = $('#phonecode').val();
+        var password = $('#password').val();
+        var password2 = $('#password2').val();
+
+        params = {
+            mobile: mobile,
+            sms_code: sms_code,
+            password: password,
+            password2: password2
+        };
+        if(!mobile){
+            $('#mobile-err span').html('请输入手机');
+            $('#mobile-err span').show();
+        }
+         if(!mobile){
+            $('#phone-code-err span').html('请输入手机验证码');
+            $('#phone-code-err span').show();
+        }
+         if(!mobile){
+            $('#password-err span').html('请输入密码');
+            $('#password-err span').show();
+        }
+         if(!mobile){
+            $('#password2-err span').html('请确认密码');
+            $('#password2-err span').show();
+        }
+        if(password !== password2){
+            $('#password2-err span').html('两次输入的密码不一致');
+            $('#password2-err span').show();
+        }
+        $.ajax({
+            url: "api/1.0/users",
+            method: "POST",
+            contentType: "application/json",
+            data: JSON.stringify(params),
+            headers: {
+                "X-CSRFToken": getCookie("csrf_token")
+            },
+            success: function (data) {
+                if (data.errno === '0') {
+                    location.href='/'
+                }
+                else {
+                    alert(data.errmsg)
+                }
+            }
+        })
+    })
+
 });
