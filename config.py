@@ -1,4 +1,6 @@
 # -*- coding:utf-8 -*-
+import logging
+
 import redis
 
 
@@ -23,13 +25,14 @@ class Config(object):
 
 class DevelopmentConfig(Config):
     """开发环境"""
-    pass
+    LOGGING_LEVEL = logging.DEBUG
 
 
 class ProductConfig(Config):
     """生产环境"""
     DUBUG = False
     SQLALCHEMY_DATABASE_URI = 'mysql://root:fuckyou@127.0.0.1:3306/db_ihome'
+    LOGGING_LEVEL = logging.WARN
 
 
 class UnittestConfig(Config):

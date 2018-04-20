@@ -1,4 +1,7 @@
 # -*- coding:utf-8 -*-
+import logging
+from logging.handlers import RotatingFileHandler
+
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import redis
@@ -19,11 +22,20 @@ csrf = CSRFProtect()
 # session
 session = Session()
 
+def setup_logging(level):
+    logging.basicConfig(level=logging.DEBUG)
+    file_log_handler = RotatingFileHandler('logs/log', maxBytes=1024 * 1024 * 100, backupCount=10)
+    formatter = logging.Formatter('%(levelname)s %(filename)s:%(lineno)d %(message)s')
+    file_log_handler.setFormatter(formatter)
+
+    logging.getLogger().addHandler(file_log_handler)
+
 
 def create_app(config_name):
     app = Flask(__name__)
     # 读取配置
     app.config.from_object(configs[config_name])
+    setup_logging(configs[config_name].LOGGING_LEVEL)
 
     # 实例化数据库
     db.init_app(app)

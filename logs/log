@@ -1,0 +1,44 @@
+WARNING_internal.py:87 * Debugger is active!
+WARNING_internal.py:87 * Debugger is active!
+WARNING_internal.py:87 * Debugger is active!
+WARNING_internal.py:87 * Debugger is active!
+WARNING_internal.py:87 * Debugger is active!
+WARNING_internal.py:87 * Debugger is active!
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 134-397-501
+INFO _internal.py:87  * Detected change in '/home/shayv/PycharmProjects/iHome/ihome/__init__.py', reloading
+INFO _internal.py:87  * Restarting with stat
+WARNING_internal.py:87 * Debugger is active!
+WARNING_internal.py:87 * Debugger is active!
+WARNING _internal.py:87 * Debugger is active!
+WARNING _internal.py:87  * Debugger is active!
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 134-397-501
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 134-397-501
+INFO _internal.py:87  * Detected change in '/home/shayv/PycharmProjects/iHome/ihome/__init__.py', reloading
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 134-397-501
+INFO _internal.py:87 127.0.0.1 - - [20/Apr/2018 15:21:35] "GET /register.html HTTP/1.1" 304 -
+DEBUG verify.py:44 LYVH
+INFO _internal.py:87 127.0.0.1 - - [20/Apr/2018 15:21:36] "GET /api/1.0/img_code?uuid=c0a33679-092d-4cb1-b967-facc91eff0aa HTTP/1.1" 200 -
+INFO _internal.py:87  * Detected change in '/home/shayv/PycharmProjects/iHome/ihome/api_1_0/verify.py', reloading
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 134-397-501
+INFO _internal.py:87  * Detected change in '/home/shayv/PycharmProjects/iHome/ihome/api_1_0/verify.py', reloading
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 134-397-501
+INFO _internal.py:87 127.0.0.1 - - [20/Apr/2018 15:22:54] "GET /register.html HTTP/1.1" 304 -
+DEBUG verify.py:43 XW6J
+INFO _internal.py:87 127.0.0.1 - - [20/Apr/2018 15:22:54] "GET /api/1.0/img_code?uuid=ee95a5f4-f2c6-4af3-8882-0ad16c0a7d76 HTTP/1.1" 200 -

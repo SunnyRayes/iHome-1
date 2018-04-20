@@ -1,10 +1,11 @@
 # -*- coding:utf-8 -*-
 import json
+import logging
 import random
 
 import re
 
-from flask import make_response, request, jsonify, abort
+from flask import make_response, request, jsonify, abort, current_app
 from ihome import redis_store, constants
 from ihome.response_code import RET, error_map
 from . import api
@@ -31,7 +32,7 @@ def get_verify_code():
             redis_store.delete('Img_code:%s' % old_uuid)
         redis_store.set('Img_code:%s' % uuid, text, constants.IMAGE_CODE_REDIS_EXPIRES)
     except Exception as e:
-        print(e)
+        current_app.logger.error(e)
         return jsonify({'errcode': RET.DATAERR, 'errmsg': error_map[RET.DATAERR]})
     global old_uuid
     old_uuid = uuid
@@ -39,7 +40,7 @@ def get_verify_code():
     response = make_response(image)
 
     response.headers['Content-Type'] = 'image/jpg'
-    print(text)
+    current_app.logger.debug(text)
 
     return response
 
@@ -62,7 +63,7 @@ def send_sms_code():
     try:
         img_code_server = redis_store.get('Img_code:%s' % uuid)
     except Exception as e:
-        print(e)
+        current_app.logger.error(e)
         return jsonify(errno=RET.DBERR, errmsg=error_map[RET.DBERR])
     if not img_code_server:
         return jsonify(errno=RET.DATAERR, errmsg='验证码不存在')
@@ -77,5 +78,6 @@ def send_sms_code():
     try:
         redis_store.set('sms_code:%s' % mobile, sms_code, constants.SMS_CODE_REDIS_EXPIRES)
     except Exception as e:
+        current_app.logger.error(e)
         return jsonify(errno=RET.DBERR, errmsg=error_map[RET.DBERR])
     return jsonify(errno=RET.OK, errmsg='发送验证码成功')
