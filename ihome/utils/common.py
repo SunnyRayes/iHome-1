@@ -1,8 +1,8 @@
 # -*-coding:utf-8-*-
 from flask import session, jsonify, g
 from werkzeug.routing import BaseConverter
-
 from ihome.response_code import RET, error_map
+from functools import wraps
 
 
 class RegexConverter(BaseConverter):
@@ -13,6 +13,7 @@ class RegexConverter(BaseConverter):
 
 # 定义登录验证
 def login_required(func):
+    @wraps(func)
     def wrapper(*args, **kwargs):
         user_id = session.get('user_id')
         if user_id is None:
