@@ -1,11 +1,52 @@
 # -*-coding:utf-8 -*-
 import re
-from flask import request, jsonify
+from flask import request, jsonify, current_app, session
 
 from ihome import redis_store, db
 from ihome.models import User
 from ihome.response_code import RET, error_map
+from ihome.utils.common import login_required
 from . import api
+
+
+@api.route('/sessions', methods=['DELETE'])
+@login_required
+def logout():
+    """退出登录"""
+    session.pop('name')
+    session.pop('mobile')
+    session.pop('user_id')
+    return jsonify(errno=RET.OK, errmsg='OK')
+
+
+@api.route('/sessions', methods=['POST'])
+def login():
+    # 获取参数
+    request_dict = request.json
+    mobile = request_dict.get('mobile')
+    password = request_dict.get('password')
+
+    # 判断有效性
+    if not all([mobile, password]):
+        return jsonify(errno=RET.PARAMERR, errmsg='缺少参数')
+    if not re.match(r'^1[3-8]\d{9}$', mobile):
+        return jsonify(errno=RET.PARAMERR, errmsg='手机号不合法')
+
+    # 查询数据库
+    try:
+        user = User.query.filter_by(mobile=mobile).first()
+    except Exception as e:
+        current_app.logger.error(e)
+        return jsonify(errno=RET.DBERR, errmsg='查询用户信息失败')
+    if user is None:
+        return jsonify(errno=RET.PARAMERR, errmsg='用户或密码错误')
+    if not user.check_password(password):
+        return jsonify(errno=RET.PWDERR, errmsg='用户名或密码错误')
+
+    session['user_id'] = user.id
+    session['name'] = user.name
+    session['mobile'] = user.mobile
+    return jsonify(errno=RET.OK, errmsg='登录成功')
 
 
 @api.route('/users', methods=['POST'])
@@ -41,4 +82,8 @@ def register():
     except Exception as e:
         print(e)
         db.session.rollback()
+
+    session['user_id'] = user.id
+    session['name'] = user.name
+    session['mobile'] = user.mobile
     return jsonify(errno=RET.OK, errmsg='注册成功')

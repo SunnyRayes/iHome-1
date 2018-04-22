@@ -36,9 +36,9 @@ class CCP(object):
     def __new__(cls, *args, **kwargs):
         if not hasattr(CCP, '_instance'):
             cls._instance = super(CCP, cls).__new__(cls, *args, **kwargs)
-            cls.rest = REST(serverIP, serverPort, softVersion)
-            cls.rest.setAccount(accountSid, accountToken)
-            cls.rest.setAppId(appId)
+            cls._instance.rest = REST(serverIP, serverPort, softVersion)
+            cls._instance.rest.setAccount(accountSid, accountToken)
+            cls._instance.rest.setAppId(appId)
         return cls._instance
 
     def sendTemplateSMS(self, to, datas, tempId):
@@ -53,20 +53,3 @@ class CCP(object):
         #     else:
         #         print '%s:%s' % (k, v)
 
-# def sendTemplateSMS(to, datas, tempId):
-#     # ≥ı ºªØREST SDK
-#     rest = REST(serverIP, serverPort, softVersion)
-#     rest.setAccount(accountSid, accountToken)
-#     rest.setAppId(appId)
-#
-#     result = rest.sendTemplateSMS(to, datas, tempId)
-#     for k, v in result.iteritems():
-#
-#         if k == 'templateSMS':
-#             for k, s in v.iteritems():
-#                 print '%s:%s' % (k, s)
-#         else:
-#             print '%s:%s' % (k, v)
-
-
-# sendTemplateSMS('13421416120', ['666666'], '1')
