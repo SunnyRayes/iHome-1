@@ -84,10 +84,25 @@ $(document).ready(function () {
     });
 
     // TODO: 获取城区信息,获取完毕之后需要设置城区按钮点击之后相关操作
+    $.get('/api/1.0/areas', function (response) {
+        if (response.errno === '0') {
+            $('.area-list').html(template('area-list-tmpl', {areas: response.data}));
+            $('.area-list>a').click(function (event) {
+                $('#area-btn').html($(this).html());
+                $('.search-btn').attr('area-id', $(this).attr('area-id'));
+                $('.search-btn').attr('area-name', $(this).text());
+                $('#area-modal').modal('hide');
+            });
+        }
+        else {
+            alert(response.errmsg)
+        }
+    });
+
 
     // TODO: 城区按钮点击之后相关操作
     $(".area-list a").click(function (e) {
-        $("#area-btn").html($(this).html());
+        $("#area-btn").rte($(this).html());
         $(".search-btn").attr("area-id", $(this).attr("area-id"));
         $(".search-btn").attr("area-name", $(this).html());
         $("#area-modal").modal("hide");

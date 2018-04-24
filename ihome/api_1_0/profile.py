@@ -131,6 +131,7 @@ def get_user_profile():
         return jsonify(errno=RET.DBERR, errmsg='查询数据失败')
     response_dict = {
         'name': user.name,
-        'avatar_url': constants.QINIU_DOMIN_PREFIX + user.avatar_url
+        'avatar_url': constants.QINIU_DOMIN_PREFIX + user.avatar_url,
+        'mobile': user.mobile
     }
     return jsonify(errno=RET.OK, errmsg='OK', data=response_dict)
