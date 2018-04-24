@@ -9,6 +9,15 @@ from ihome.utils.common import login_required
 from . import api
 
 
+@api.route('/sessions', methods=['GET'])
+def check_login():
+    name = session.get('name')
+    user_id = session.get('user_id')
+    if not name:
+        return jsonify(errno=RET.SESSIONERR, errmsg='用户未登录')
+    return jsonify(errno=RET.OK, errmsg='OK', data={'name': name, 'user_id': user_id})
+
+
 @api.route('/sessions', methods=['DELETE'])
 @login_required
 def logout():
