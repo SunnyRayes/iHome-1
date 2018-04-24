@@ -4,8 +4,7 @@
     <list default="true" id="ef9e6393-4648-4aae-b006-18428085d416" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/ihome/api_1_0/house.py" afterPath="$PROJECT_DIR$/ihome/api_1_0/house.py" />
-      <change beforePath="$PROJECT_DIR$/ihome/api_1_0/verify.py" afterPath="$PROJECT_DIR$/ihome/api_1_0/verify.py" />
-      <change beforePath="$PROJECT_DIR$/ihome/static/js/ihome/detail.js" afterPath="$PROJECT_DIR$/ihome/static/js/ihome/detail.js" />
+      <change beforePath="$PROJECT_DIR$/ihome/api_1_0/profile.py" afterPath="$PROJECT_DIR$/ihome/api_1_0/profile.py" />
       <change beforePath="$PROJECT_DIR$/ihome/static/js/ihome/index.js" afterPath="$PROJECT_DIR$/ihome/static/js/ihome/index.js" />
       <change beforePath="$PROJECT_DIR$/logs/log" afterPath="$PROJECT_DIR$/logs/log" />
     </list>
@@ -21,7 +20,7 @@
     <SUITE FILE_PATH="coverage/iHome$secretkey.coverage" NAME="secretkey Coverage Results" MODIFIED="1523951112663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/iHome$image_storage.coverage" NAME="image_storage Coverage Results" MODIFIED="1524388208906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ihome/utils" />
     <SUITE FILE_PATH="coverage/iHome$SendTemplateSMS.coverage" NAME="SendTemplateSMS Coverage Results" MODIFIED="1524139060994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ihome/utils" />
-    <SUITE FILE_PATH="coverage/iHome$manage.coverage" NAME="manage Coverage Results" MODIFIED="1524560678643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/iHome$manage.coverage" NAME="manage Coverage Results" MODIFIED="1524570762625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/iHome$test.coverage" NAME="test Coverage Results" MODIFIED="1524054038304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ihome" />
   </component>
   <component name="DatabaseView">
@@ -54,11 +53,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="passport.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ihome/api_1_0/passport.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="864">
+              <caret line="55" column="31" lean-forward="false" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="house.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ihome/api_1_0/house.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+            <state relative-caret-position="-352">
+              <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
               <folding>
                 <element signature="e#23#67#0" expanded="true" />
               </folding>
@@ -66,41 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="verify.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ihome/api_1_0/verify.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="74" column="41" lean-forward="false" selection-start-line="74" selection-start-column="41" selection-end-line="74" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ihome/static/js/ihome/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ihome/static/js/ihome/detail.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ihome/static/html/detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="121" column="28" lean-forward="false" selection-start-line="121" selection-start-column="18" selection-end-line="121" selection-end-column="28" />
+            <state relative-caret-position="306">
+              <caret line="86" column="101" lean-forward="false" selection-start-line="86" selection-start-column="101" selection-end-line="86" selection-end-column="101" />
               <folding />
             </state>
           </provider>
@@ -109,8 +88,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ihome/static/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="43" column="60" lean-forward="false" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="60" />
+            <state relative-caret-position="1044">
+              <caret line="64" column="69" lean-forward="false" selection-start-line="64" selection-start-column="65" selection-end-line="64" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -119,9 +98,18 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ihome/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="114" column="36" lean-forward="true" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="36" />
+            <state relative-caret-position="380">
+              <caret line="94" column="8" lean-forward="false" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ih_house_info" pinned="false" current-in-tab="true">
+        <entry file="das://table:/a44b983a/32164dc8-b901-40db-a6a8-1aed6efa2624/ihome.ih_house_info">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -152,8 +140,8 @@
       <find>modal-content</find>
       <find>area-modal</find>
       <find>modal</find>
-      <find>data-toggle</find>
       <find>预定</find>
+      <find>data-toggle</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -186,13 +174,13 @@
         <option value="$PROJECT_DIR$/ihome/static/html/newhouse.html" />
         <option value="$PROJECT_DIR$/ihome/static/js/ihome/newhouse.js" />
         <option value="$PROJECT_DIR$/ihome/api_1_0/passport.py" />
-        <option value="$PROJECT_DIR$/ihome/api_1_0/profile.py" />
         <option value="$PROJECT_DIR$/ihome/static/js/ihome/my.js" />
         <option value="$PROJECT_DIR$/ihome/static/html/index.html" />
-        <option value="$PROJECT_DIR$/ihome/static/js/ihome/index.js" />
-        <option value="$PROJECT_DIR$/ihome/api_1_0/house.py" />
         <option value="$PROJECT_DIR$/ihome/static/js/ihome/detail.js" />
         <option value="$PROJECT_DIR$/ihome/api_1_0/verify.py" />
+        <option value="$PROJECT_DIR$/ihome/api_1_0/house.py" />
+        <option value="$PROJECT_DIR$/ihome/api_1_0/profile.py" />
+        <option value="$PROJECT_DIR$/ihome/static/js/ihome/index.js" />
       </list>
     </option>
   </component>
@@ -259,7 +247,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="ver&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/api_1_0/verify.py&#10;passport&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/api_1_0/passport.py&#10;deta&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/html/detail.html&#10;index.html&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/html/index.html&#10;my.html&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/html/my.html&#10;my.js&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/js/ihome/my.js&#10;passp&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/api_1_0/passport.py&#10;index.js&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/js/ihome/index.js&#10;detail.js&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/js/ihome/detail.js&#10;detail.html&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/html/detail.html&#10;newhouse.js&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/js/ihome/newhouse.js&#10;newhouse.h&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/html/newhouse.html&#10;auth.js&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/js/ihome/auth.js&#10;auth.ht&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/html/auth.html&#10;profile.js&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/js/ihome/profile.js&#10;profile.htm&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/html/profile.html&#10;my.&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/html/my.html&#10;login.js&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/js/ihome/login.js&#10;login.h&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/html/login.html&#10;reg&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/html/register.html&#10;regi&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/js/ihome/register.js&#10;register.js&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/js/ihome/register.js" />
+    <property name="SearchEverywhereHistoryKey" value="pass&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/api_1_0/passport.py&#10;profi&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/api_1_0/profile.py&#10;PROFI&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/api_1_0/profile.py&#10;ver&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/api_1_0/verify.py&#10;passport&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/api_1_0/passport.py&#10;deta&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/html/detail.html&#10;index.html&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/html/index.html&#10;my.html&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/html/my.html&#10;my.js&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/js/ihome/my.js&#10;passp&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/api_1_0/passport.py&#10;index.js&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/js/ihome/index.js&#10;detail.js&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/js/ihome/detail.js&#10;detail.html&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/html/detail.html&#10;newhouse.js&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/js/ihome/newhouse.js&#10;newhouse.h&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/html/newhouse.html&#10;auth.js&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/js/ihome/auth.js&#10;auth.ht&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/html/auth.html&#10;profile.js&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/js/ihome/profile.js&#10;profile.htm&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/html/profile.html&#10;my.&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/html/my.html&#10;login.js&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/js/ihome/login.js&#10;login.h&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/html/login.html&#10;reg&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/html/register.html&#10;regi&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/js/ihome/register.js&#10;register.js&#9;FILE&#9;file:///home/shayv/PycharmProjects/iHome/ihome/static/js/ihome/register.js" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
@@ -429,16 +417,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-11" width="1368" height="727" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37117118" sideWeight="0.50303954" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7297297" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27567568" sideWeight="0.4969605" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27567568" sideWeight="0.4969605" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3927928" sideWeight="0.4969605" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22948328" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30167174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30167174" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -451,6 +440,28 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37117118" sideWeight="0.50303954" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7297297" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27567568" sideWeight="0.4969605" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3927928" sideWeight="0.4969605" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22948328" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30167174" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -819,25 +830,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/a44b983a/32164dc8-b901-40db-a6a8-1aed6efa2624/ihome.ih_house_info">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/lib/python2.7/socket.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="227" column="0" lean-forward="false" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ihome/api_1_0/profile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="134" column="29" lean-forward="false" selection-start-line="134" selection-start-column="29" selection-end-line="134" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -866,37 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ihome/static/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="43" column="60" lean-forward="false" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ihome/static/js/ihome/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ihome/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="114" column="36" lean-forward="true" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a44b983a/32164dc8-b901-40db-a6a8-1aed6efa2624/ihome.ih_user_profile">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ihome/static/html/detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -913,29 +878,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ihome/api_1_0/passport.py">
+    <entry file="file://$PROJECT_DIR$/ihome/api_1_0/verify.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1225">
-          <caret line="17" column="84" lean-forward="false" selection-start-line="17" selection-start-column="84" selection-end-line="17" selection-end-column="84" />
+        <state relative-caret-position="188">
+          <caret line="74" column="41" lean-forward="false" selection-start-line="74" selection-start-column="41" selection-end-line="74" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ihome/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="94" column="8" lean-forward="false" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/a44b983a/32164dc8-b901-40db-a6a8-1aed6efa2624/ihome.ih_user_profile">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ihome/static/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1044">
+          <caret line="64" column="69" lean-forward="false" selection-start-line="64" selection-start-column="65" selection-end-line="64" selection-end-column="69" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ihome/api_1_0/house.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        <state relative-caret-position="-352">
+          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
           <folding>
             <element signature="e#23#67#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ihome/api_1_0/verify.py">
+    <entry file="file://$PROJECT_DIR$/ihome/api_1_0/profile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="74" column="41" lean-forward="false" selection-start-line="74" selection-start-column="41" selection-end-line="74" selection-end-column="41" />
+        <state relative-caret-position="314">
+          <caret line="133" column="93" lean-forward="false" selection-start-line="133" selection-start-column="93" selection-end-line="133" selection-end-column="93" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ihome/api_1_0/passport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="55" column="31" lean-forward="false" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ihome/static/js/ihome/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="86" column="101" lean-forward="false" selection-start-line="86" selection-start-column="101" selection-end-line="86" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/a44b983a/32164dc8-b901-40db-a6a8-1aed6efa2624/ihome.ih_house_info">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>

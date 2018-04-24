@@ -8,6 +8,17 @@ from flask import jsonify, request, g, current_app, session
 from ihome.response_code import RET
 
 
+@api.route('/house/index', methods=['GET'])
+def get_house_index():
+    """获取首页轮播房源，即最新的5间"""
+    try:
+        houses = House.query.order_by(House.create_time.desc())
+    except Exception as e:
+        return jsonify(errno=RET.DBERR, errmsg='查询房源失败')
+    house_list = [house.to_basic_dict() for house in houses]
+    return jsonify(errno=RET.OK, errmsg='OK', house_list=house_list)
+
+
 @api.route('/house/<house_id>', methods=['GET'])
 def get_house_detail(house_id):
     try:

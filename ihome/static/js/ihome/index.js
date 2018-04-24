@@ -57,8 +57,18 @@ function goToSearchPage(th) {
     location.href = url;
 }
 
+function swiper() {
+    var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: 2000,
+        autoplayDisableOnInteraction: false,
+        pagination: '.swiper-pagination',
+        paginationClickable: true
+    });
+}
+
 $(document).ready(function () {
-    // TODO: 检查用户的登录状态
+    // TODO: 检查用户的登录状态, 用户状态从session中获取，修改时最好改动一下session
     $.get('/api/1.0/sessions', function (response) {
             if (response.errno === '0') {
                 $(".top-bar>.register-login").hide();
@@ -72,16 +82,18 @@ $(document).ready(function () {
         }
     );
 
-    // TODO: 获取幻灯片要展示的房屋基本信息
+    $.get('/api/1.0/house/index', function (response) {
+        if (response.errno === '0') {
+            $('.swiper-wrapper').html(template('swiper-houses-tmpl', {houses: response.house_list}));
+            swiper();
+        }
+        else {
+            alert(response.errmsg)
+        }
+    });
 
     // TODO: 数据设置完毕后,需要设置幻灯片对象，开启幻灯片滚动
-    var mySwiper = new Swiper('.swiper-container', {
-        loop: true,
-        autoplay: 2000,
-        autoplayDisableOnInteraction: false,
-        pagination: '.swiper-pagination',
-        paginationClickable: true
-    });
+
 
     // TODO: 获取城区信息,获取完毕之后需要设置城区按钮点击之后相关操作
     $.get('/api/1.0/areas', function (response) {
