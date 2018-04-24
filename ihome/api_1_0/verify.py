@@ -71,7 +71,8 @@ def send_sms_code():
         return jsonify(errno=RET.PARAMERR, errmsg='验证码错误')
     # 发送短信验证码
     sms_code = '%06d' % random.randint(0, 999999)
-    result = CCP().sendTemplateSMS('13421416120', [sms_code], '1')
+
+    result = CCP().sendTemplateSMS(mobile, [sms_code], '1')
     if result:
         return jsonify(errno=RET.THIRDERR, errmsg=error_map[RET.THIRDERR])
     # 保存到ｒｅｄｉｓ中
@@ -80,4 +81,5 @@ def send_sms_code():
     except Exception as e:
         current_app.logger.error(e)
         return jsonify(errno=RET.DBERR, errmsg=error_map[RET.DBERR])
+    current_app.logger.debug(sms_code)
     return jsonify(errno=RET.OK, errmsg='发送验证码成功')

@@ -1339,3 +1339,103 @@ INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:12:10] "GET /api/1.0/sessions
 INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:12:11] "GET /static/plugins/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 200 -
 INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:12:11] "GET /api/1.0/areas HTTP/1.1" 200 -
 INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:12:11] "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:14:36] "GET /detail.html?id=3 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:14:36] "GET /static/css/ihome/detail.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:14:36] "GET /static/js/ihome/detail.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:14:36] "GET /api/1.0/house/3 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:14:36] "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:14:37] "GET /static/images/houseicon_sprite.png HTTP/1.1" 200 -
+INFO _internal.py:87  * Detected change in '/home/shayv/PycharmProjects/iHome/ihome/api_1_0/house.py', reloading
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 134-397-501
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:31:54] "GET /detail.html?id=3 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:31:54] "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:31:54] "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:31:54] "GET /static/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:31:54] "GET /static/plugins/swiper/css/swiper.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:31:54] "GET /static/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:31:54] "GET /static/css/ihome/main.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:31:54] "GET /static/css/ihome/detail.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:31:54] "GET /static/js/jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:31:54] "GET /static/plugins/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:31:54] "GET /static/plugins/swiper/js/swiper.jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:31:55] "GET /static/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:31:55] "GET /static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:31:55] "GET /static/js/template.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:31:55] "GET /static/js/ihome/detail.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:31:55] "GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:31:55] "GET /static/plugins/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:31:55] "GET /api/1.0/house/3 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:31:55] "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:31:55] "GET /static/images/houseicon_sprite.png HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:32:08] "GET / HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:32:08] "GET /static/css/ihome/index.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:32:08] "GET /static/js/ihome/index.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:32:08] "GET /static/images/logo@128x59.png HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:32:08] "GET /api/1.0/sessions HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:32:09] "GET /api/1.0/areas HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:32:09] "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:32:10] "GET /my.html HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:32:11] "GET /static/css/ihome/my.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:32:11] "GET /static/js/ihome/my.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:32:11] "GET /api/1.0/users HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:32:12] "DELETE /api/1.0/sessions HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:32:13] "GET /api/1.0/sessions HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:32:13] "GET /api/1.0/areas HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:32:13] "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:32:15] "GET /register.html HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:32:15] "GET /static/css/ihome/register.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:32:15] "GET /static/js/ihome/register.js?v=4 HTTP/1.1" 200 -
+DEBUG verify.py:43 ROV8
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:32:15] "GET /api/1.0/img_code?uuid=e8ce0a34-c006-48c3-8bea-b6417eda4ff9 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:32:36] "POST /api/1.0/sms_code HTTP/1.1" 200 -
+INFO _internal.py:87  * Detected change in '/home/shayv/PycharmProjects/iHome/ihome/api_1_0/verify.py', reloading
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 134-397-501
+INFO _internal.py:87  * Detected change in '/home/shayv/PycharmProjects/iHome/ihome/api_1_0/verify.py', reloading
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 134-397-501
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:38:10] "POST /api/1.0/users HTTP/1.1" 200 -
+DEBUG verify.py:43 ODXA
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:38:15] "GET /api/1.0/img_code?uuid=6a16caae-696a-42f7-9daf-113fdacfa582 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:38:54] "GET /register.html HTTP/1.1" 304 -
+DEBUG verify.py:43 CLF6
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:38:54] "GET /api/1.0/img_code?uuid=53c84439-7a81-40a3-84ad-c6e2c26a05dc HTTP/1.1" 200 -
+DEBUG verify.py:84 860696
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:39:05] "POST /api/1.0/sms_code HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:39:25] "POST /api/1.0/users HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:39:26] "GET /api/1.0/sessions HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:39:26] "GET /api/1.0/areas HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:39:26] "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:40:13] "GET /api/1.0/house/3 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:40:13] "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:40:53] "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:40:55] "GET /api/1.0/users HTTP/1.1" 500 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:40:56] "DELETE /api/1.0/sessions HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:40:56] "GET /api/1.0/sessions HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:40:56] "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:40:56] "GET /api/1.0/areas HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:41:00] "GET /login.html HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:41:00] "GET /static/css/ihome/login.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:41:00] "GET /static/js/ihome/login.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:41:09] "POST /api/1.0/sessions HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:41:10] "GET /api/1.0/sessions HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:41:10] "GET /api/1.0/areas HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:41:10] "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:41:21] "GET /api/1.0/house/3 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:41:22] "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:41:31] "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:41:32] "GET /api/1.0/users HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:41:34] "DELETE /api/1.0/sessions HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:41:34] "GET /api/1.0/sessions HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:41:35] "GET /api/1.0/areas HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:41:35] "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:41:40] "GET /api/1.0/house/3 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:41:40] "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:41:42] "GET /api/1.0/house/3 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:41:43] "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:41:45] "GET /api/1.0/house/3 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [24/Apr/2018 19:41:45] "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 -

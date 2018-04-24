@@ -100,13 +100,8 @@ $(document).ready(function () {
     });
 
 
-    // TODO: 城区按钮点击之后相关操作
-    $(".area-list a").click(function (e) {
-        $("#area-btn").rte($(this).html());
-        $(".search-btn").attr("area-id", $(this).attr("area-id"));
-        $(".search-btn").attr("area-name", $(this).html());
-        $("#area-modal").modal("hide");
-    });
+    //
+
 
     $('.modal').on('show.bs.modal', centerModals);      //当模态框出现的时候
     $(window).on('resize', centerModals);               //当窗口大小变化的时候
@@ -120,4 +115,4 @@ $(document).ready(function () {
         var date = $(this).datepicker("getFormattedDate");
         $("#start-date-input").val(date);
     });
-})
+});

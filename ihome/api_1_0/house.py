@@ -19,7 +19,7 @@ def get_house_detail(house_id):
         return jsonify(errno=RET.PARAMERR, errmsg='没有该房屋')
     user_id = session.get('user_id', -1)
     house_detail = house.to_full_dict()
-    return jsonify(errno=RET.OK, errmsg='OK', data=house_detail)
+    return jsonify(errno=RET.OK, errmsg='OK', data=house_detail, user_id=user_id)
 
 
 @api.route('/house/images', methods=['POST'])

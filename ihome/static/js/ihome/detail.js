@@ -27,6 +27,12 @@ $(document).ready(function () {
             $('.swiper-container').html(swiper_slide);
             swiper();
             $('.detail-con').html(template('house-detail-tmpl', {house: response.data}))
+            if(response.data.user_id !== response.user_id){
+                $('.book-house').show()
+            }
+            else {
+                $('.book-house').hide()
+            }
         }
         else {
             alert(response.errmsg)
