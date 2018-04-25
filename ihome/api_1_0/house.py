@@ -46,14 +46,15 @@ def get_house_list():
         # 对日期进行过滤
         orders = []
         if start_date and end_date:
-            orders = Order.query.filter(or_(Order.begin_date >= end_date, Order.end_date <= start_date)).all()
+            orders = Order.query.filter(Order.begin_date < end_date, Order.end_date > start_date).all()
         elif start_date:
             orders = Order.query.filter(or_(Order.begin_date >= start_date, Order.end_date <= start_date)).all()
         elif end_date:
             orders = Order.query.filter(or_(Order.begin_date >= end_date, Order.end_date <= end_date)).all()
         if orders:
             house_ids = [order.house_id for order in orders]
-            house_query = house_query.filter(House.id in house_ids)
+            current_app.logger.debug(house_ids)
+            house_query = house_query.filter(House.id.notin_(house_ids))
 
         # 排序
         if sk == 'booking':

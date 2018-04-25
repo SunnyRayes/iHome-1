@@ -52,7 +52,6 @@ $(document).ready(function () {
     var queryData = decodeQuery();
     var houseId = queryData["hid"];
 
-    // TODO: 获取房屋的基本信息
     $.get('/api/1.0/house/' + houseId, function (response) {
         if (response.errno === '0') {
             $('.house-info>img').prop('src', response.data.avatar_url);
@@ -65,7 +64,35 @@ $(document).ready(function () {
         else {
             alert(response.errmsg)
         }
-    })
+    });
 
     // TODO: 订单提交
+    $('.submit-btn').on('click', function () {
+        if ($('.order-amount>span').html()) {
+            var sd = $('#start-date').val();
+            var ed = $('#end-date').val();
+            var params = {
+                'sd': sd,
+                'ed': ed,
+                'house_id': houseId
+            };
+            $.ajax({
+                url: '/api/1.0/orders',
+                type: 'post',
+                contentType: 'application/json',
+                data: JSON.stringify(params),
+                headers: {'X-CSRFToken': getCookie('csrf_token')},
+                success: function (response) {
+                    if (response.errno === '0') {
+                        location.href = 'orders.html'
+                    } else if (response.errno === '4101') {
+                        location.href = 'login.html'
+                    } else {
+                        alert(response.errmsg)
+                    }
+
+                }
+            })
+        }
+    })
 });
