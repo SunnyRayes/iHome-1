@@ -7,9 +7,9 @@ function getCookie(name) {
     return r ? r[1] : undefined;
 }
 
-function decodeQuery(){
+function decodeQuery() {
     var search = decodeURI(document.location.search);
-    return search.replace(/(^\?)/, '').split('&').reduce(function(result, item){
+    return search.replace(/(^\?)/, '').split('&').reduce(function (result, item) {
         values = item.split('=');
         result[values[0]] = values[1];
         return result;
@@ -17,14 +17,15 @@ function decodeQuery(){
 }
 
 function showErrorMsg() {
-    $('.popup_con').fadeIn('fast', function() {
-        setTimeout(function(){
-            $('.popup_con').fadeOut('fast',function(){}); 
-        },1000) 
+    $('.popup_con').fadeIn('fast', function () {
+        setTimeout(function () {
+            $('.popup_con').fadeOut('fast', function () {
+            });
+        }, 1000)
     });
 }
 
-$(document).ready(function(){
+$(document).ready(function () {
     // TODO: 判断用户是否登录
 
     $(".input-daterange").datepicker({
@@ -33,7 +34,7 @@ $(document).ready(function(){
         language: "zh-CN",
         autoclose: true
     });
-    $(".input-daterange").on("changeDate", function(){
+    $(".input-daterange").on("changeDate", function () {
         var startDate = $("#start-date").val();
         var endDate = $("#end-date").val();
 
@@ -42,16 +43,29 @@ $(document).ready(function(){
         } else {
             var sd = new Date(startDate);
             var ed = new Date(endDate);
-            days = (ed - sd)/(1000*3600*24) + 1;
+            days = (ed - sd) / (1000 * 3600 * 24);
             var price = $(".house-text>p>span").html();
             var amount = days * parseFloat(price);
-            $(".order-amount>span").html(amount.toFixed(2) + "(共"+ days +"晚)");
+            $(".order-amount>span").html(amount.toFixed(2) + "(共" + days + "晚)");
         }
     });
     var queryData = decodeQuery();
     var houseId = queryData["hid"];
 
     // TODO: 获取房屋的基本信息
+    $.get('/api/1.0/house/' + houseId, function (response) {
+        if (response.errno === '0') {
+            $('.house-info>img').prop('src', response.data.avatar_url);
+            $('.house-text>h3').text(response.data.title);
+            $('.house-text span').text((response.data.price / 100).toFixed(2));
+        }
+        else if (response.errno === '4101') {
+            location.href = 'login.html'
+        }
+        else {
+            alert(response.errmsg)
+        }
+    })
 
     // TODO: 订单提交
-})
+});

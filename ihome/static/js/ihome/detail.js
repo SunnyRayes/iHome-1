@@ -26,12 +26,12 @@ $(document).ready(function () {
             });
             $('.swiper-container').html(swiper_slide);
             swiper();
-            $('.detail-con').html(template('house-detail-tmpl', {house: response.data}))
-            if(response.data.user_id !== response.user_id){
-                $('.book-house').show()
+            $('.detail-con').html(template('house-detail-tmpl', {house: response.data}));
+            if (response.data.user_id !== response.user_id) {
+                $('.book-house').show().prop('href', 'booking.html?hid=' + houseId);
             }
             else {
-                $('.book-house').hide()
+                $('.book-house').hide();
             }
         }
         else {
