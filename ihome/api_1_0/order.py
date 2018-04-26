@@ -9,6 +9,85 @@ from . import api
 from flask import request, jsonify, current_app, g
 
 
+@api.route('/order/comment/<order_id>', methods=['POST'])
+@login_required
+def set_order_comment(order_id):
+    comment = request.json.get('comment')
+    if not comment:
+        return jsonify(errno=RET.PARAMERR, errmsg='请填写评价')
+    try:
+        order = Order.query.filter(Order.id == order_id, Order.user_id == g.user_id,
+                                   Order.status == 'WAIT_COMMENT').first()
+        house = order.house
+    except Exception as e:
+        return jsonify(errno=RET.DBERR, errmsg='查询数据失败')
+
+    house.order_count += 1
+    order.status = 'COMPLETE'
+    order.comment = comment
+    try:
+        db.session.commit()
+    except Exception as e:
+        current_app.logger.error(e)
+        db.session.rollback()
+        return jsonify(errno=RET.DBERR, errmsg='保存数据失败')
+    return jsonify(errno=RET.OK, errmsg='OK')
+
+
+@api.route('/order/status/<order_id>', methods=['PUT'])
+@login_required
+def handle_orders(order_id):
+    action = request.args.get('action')
+    if action not in ['accept', 'reject']:
+        return jsonify(errno=RET.PARAMERR, errmsg='参数错误')
+    try:
+        houses = House.query.filter(House.user_id == g.user_id)
+        houses_id = [house.id for house in houses]
+        order = Order.query.filter(Order.id == order_id, Order.house_id.in_(houses_id),
+                                   Order.status == 'WAIT_ACCEPT').first()
+    except Exception as e:
+        return jsonify(errno=RET.DBERR, errmsg='查询数据失败')
+    if not order:
+        return jsonify(errno=RET.PARAMERR, errmsg='订单不存在')
+    if action == 'accept':
+        order.status = 'WAIT_COMMENT'
+    else:
+        reject_reason = request.json.get('reject_reason')
+        if not reject_reason:
+            return jsonify(errno=RET.PARAMERR, errmsg='缺少参数')
+        order.status = 'REJECTED'
+        order.comment = reject_reason
+    try:
+        db.session.commit()
+    except Exception as e:
+        current_app.logger.error(e)
+        db.session.rollback()
+        return jsonify(errno=RET.DBERR, errmsg='保存数据失败')
+    return jsonify(errno=RET.OK, errmsg='OK')
+
+
+@api.route('/order', methods=['GET'])
+@login_required
+def get_orders():
+    """获取用户订单"""
+    role = request.args.get('role')
+    if role not in ['customer', 'landlord']:
+        return jsonify(errno=RET.PARAMERR, errmsg='参数不正确')
+    orders = []
+    try:
+        if role == 'customer':
+            orders = Order.query.filter(Order.user_id == g.user_id).all()
+        else:
+            houses = House.query.filter(House.user_id == g.user_id).all()
+            house_ids = [house.id for house in houses]
+            orders = Order.query.filter(Order.house_id.in_(house_ids)).all()
+    except Exception as e:
+        current_app.logger.error(e)
+        return jsonify(errno=RET.DBERR, errmsg='查询用户信息失败')
+    orders_info = [order.to_dict() for order in orders]
+    return jsonify(errno=RET.OK, errmsg='OK', data=orders_info)
+
+
 @api.route('/orders', methods=['POST'])
 @login_required
 def add_order():

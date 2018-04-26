@@ -2,7 +2,7 @@
 from flask import g, current_app, jsonify, request
 
 from ihome import db, constants
-from ihome.models import User
+from ihome.models import User, House
 from ihome.response_code import RET, error_map
 from ihome.utils.common import login_required
 from ihome.utils.image_storage import upload_image
@@ -14,13 +14,16 @@ from . import api
 def get_auth():
     try:
         user = User().query.get(g.user_id)
+        houses = House.query.filter(House.user_id == g.user_id)
     except Exception as e:
         current_app.logger.error(e)
         return jsonify(errno=RET.DBERR, errmsg='查询用户信息失败')
     real_name = user.real_name
     id_card = user.id_card
 
-    return jsonify(errno=RET.OK, errmsg='OK', data={'real_name': real_name, 'id_card': id_card})
+    houses = [house.to_basic_dict() for house in houses]
+
+    return jsonify(errno=RET.OK, errmsg='OK', data={'real_name': real_name, 'id_card': id_card, 'houses': houses})
 
 
 @api.route('/users/auth', methods=['POST'])
